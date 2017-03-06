@@ -37,5 +37,9 @@ var controllers = angular.module("controllers", []).run(function($rootScope, $ro
     $scope.textFromControllerScope = "Bar";
 }).controller("Pane3", function($scope, $routeParams) {
     /* Pane3 controller functionality */
-    $scope.dois = $routeParams;
+    var paineis = [];
+    paineis.push($scope.$parent.panes[1]);
+    paineis.push($scope.$parent.panes[0]);
+    $scope.ranes = paineis;
+    // $scope.dois = $routeParams['dois'].split(',');
 })
