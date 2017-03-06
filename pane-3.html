@@ -1,0 +1,6 @@
+<h1>Pane 3</h1>
+{{dois}}
+<tabs>
+	<pane ng-repeat="pane in panes | filter:{includedInTabView:true}" tab-title="{{pane.name}}- " controller="{{pane.controller}}" template="{{pane.partial}}" adicionar="{{pane.vis}}">
+	</pane>
+</tabs>
